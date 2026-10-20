@@ -8,8 +8,9 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{position:relative;min-height:100vh;background:#000;color:#6c6c6c;font:16px/24px Syne,sans-serif;overflow-x:hidden}
-.bg{position:absolute;inset:0;z-index:-2;background:#000 url(/img/hero.jpg) 50% 0/cover no-repeat;filter:blur(70px) saturate(1.05);transform:scale(1.08)}
+body{min-height:100vh;background:#000;color:#6c6c6c;font:16px/24px Syne,sans-serif;overflow-x:hidden}
+.page{position:relative;overflow:hidden;min-height:100vh}
+.bg{position:absolute;inset:-120px;z-index:-2;background:#000 url(/img/hero.jpg) 50% 0/cover no-repeat;filter:blur(70px) saturate(1.05);transform:scale(1.08)}
 .bg:after{content:"";position:absolute;inset:0;background:rgba(30,0,58,.48)}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
@@ -59,7 +60,7 @@ section{padding:130px 0 150px}
 footer{padding:36px 0 40px;text-align:center;font-family:Syne,sans-serif;font-size:18px;color:rgba(255,255,255,.47);text-shadow:0 0 20px rgba(255,255,255,.21)}
 @media(max-width:600px){section{padding:90px 0 100px}.hero{padding:80px 0 120px}.card{padding:60px 32px}.form{padding:32px 24px}}
 </style></head><body>
-<div class="bg"></div>
+<div class="page"><div class="bg"></div>
 <header><div class="wrap"><a class="logo" href="/" aria-label="CV Ventures"><b>CV</b><span>VENTURES</span></a><nav><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 
 <section class="hero"><div class="wrap"><h1>A Tiny Startup Studio</h1><p class="lead">CV Ventures brings ideas, capital, resources, and talent together to build great products &amp; tools.</p></div></section>
@@ -98,4 +99,5 @@ footer{padding:36px 0 40px;text-align:center;font-family:Syne,sans-serif;font-si
 
 <footer>CV Ventures LLC - All Rights Reserved</footer>
 <script>if(location.search.includes('sent=1')){document.getElementById('thanks').style.display='block';history.replaceState(null,'',location.pathname+'#contact')}</script>
+</div>
 </body></html>
