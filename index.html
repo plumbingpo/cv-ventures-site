@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home - CV Ventures LLC</title>
+<meta name="description" content="CV Ventures is a tiny startup studio that brings ideas, capital, resources, and talent together to build great products & tools.">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{position:relative;min-height:100vh;background:#000;color:#6c6c6c;font:16px/24px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;overflow-x:hidden}
+.bg{position:absolute;inset:0;z-index:-2;background:#000 url(/img/hero.jpg) 50% 0/cover no-repeat;filter:blur(70px) saturate(1.05);transform:scale(1.08)}
+.bg:after{content:"";position:absolute;inset:0;background:rgba(30,0,58,.48)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4,.syne{font-family:Syne,sans-serif}
+h1,h2{color:#fff;font-weight:700;letter-spacing:-2px;text-align:center;text-shadow:0 0 20px rgba(255,255,255,.21);font-size:clamp(48px,7vw,91px);line-height:1}
+.lead{font-family:Syne,sans-serif;font-weight:500;color:rgba(255,255,255,.72);text-shadow:0 0 20px rgba(255,255,255,.21);font-size:clamp(20px,2.3vw,28px);line-height:1.5;text-align:center;max-width:780px;margin:18px auto 0}
+/* header */
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:0;height:97px}
+.logo{background:#fff;color:#5f1439;border-radius:0 0 12px 12px;padding:16px 26px 14px;text-align:center;line-height:1;margin-top:-97px;padding-top:113px}
+.logo b{display:block;font-family:Syne,sans-serif;font-size:36px;font-weight:700;letter-spacing:-1px}
+.logo span{display:block;font-family:Syne,sans-serif;font-size:11px;font-weight:600;letter-spacing:2.2px;margin-top:4px}
+nav{display:flex;gap:30px;font-family:Syne,sans-serif;font-size:14px;color:rgba(255,255,255,.72)}
+nav a:hover{color:#fff}
+/* sections */
+section{padding:130px 0 150px}
+.hero{padding:120px 0 190px}
+.hr{height:1px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(255,255,255,.565),rgba(0,0,0,0));margin:0 auto;max-width:1210px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:linear-gradient(165deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 100%);border-radius:8px;box-shadow:0 20px 30px -20px rgba(0,0,0,.5);padding:100px 50px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 40px -20px rgba(0,0,0,.6)}
+.card.glass{grid-column:1/-1;background:linear-gradient(165deg,rgba(255,255,255,.29) 0%,rgba(255,255,255,.06) 100%);color:#fff}
+.chip{display:inline-block;font-family:Syne,sans-serif;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;line-height:10px;padding:5px 11px;border-radius:3px;background:rgba(224,98,160,.08);color:#5f1439}
+.chip.sold{background:rgba(68,160,90,.14);color:#2c7a3f}
+.chip.soon{background:rgba(255,255,255,.18);color:#ff8ad0}
+.card h4{font-size:29px;font-weight:700;color:#5f1439;line-height:1.1}
+.card.glass h4{color:#fff}
+.card p{font-size:14px;line-height:1.4;color:#2a2a2a}
+.card.glass p{color:rgba(255,255,255,.9)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:Syne,sans-serif;font-size:15px;font-weight:600;line-height:15px;padding:12px 24px;border-radius:888px;background:#5f1439;color:#fff;margin-top:8px;transition:background .2s,transform .2s}
+.btn:hover{background:#7a1b4a;transform:translateY(-1px)}
+.btn svg{width:13px;height:13px}
+.about p{font-family:Syne,sans-serif;font-weight:500;color:rgba(255,255,255,.72);text-shadow:0 0 20px rgba(255,255,255,.21);font-size:clamp(18px,2vw,24px);line-height:1.5;text-align:center;max-width:780px;margin:18px auto 0}
+.about p+p{margin-top:28px}
+/* form */
+.form{width:470px;max-width:100%;margin:40px auto 0;padding:50px;border-radius:8px;background:linear-gradient(rgba(255,255,255,.09) 0%,rgba(255,255,255,.02) 100%);box-shadow:0 20px 30px -20px rgba(0,0,0,.5)}
+.form label{display:block;font-family:Syne,sans-serif;font-size:14px;color:#fff;margin:0 0 6px}
+.form input,.form textarea{width:100%;background:rgba(255,255,255,.17);color:#fff;border:0;border-radius:4px;padding:12px 16px;font:16px/1.4 Syne,sans-serif;margin-bottom:18px;outline:0}
+.form input::placeholder,.form textarea::placeholder{color:rgba(255,255,255,.55)}
+.form input:focus,.form textarea:focus{background:rgba(255,255,255,.25);box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+.form textarea{height:102px;resize:vertical}
+.form button{background:#fff;color:#000;border:0;border-radius:4px;padding:15px 30px;font:500 16px/16px Syne,sans-serif;cursor:pointer;transition:background .2s}
+.form button:hover{background:#f0e6ec}
+.form .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.thanks{display:none;text-align:center;color:#fff;font-family:Syne,sans-serif;font-size:20px;padding:30px 0 0}
+footer{padding:36px 0 40px;text-align:center;font-family:Syne,sans-serif;font-size:18px;color:rgba(255,255,255,.47);text-shadow:0 0 20px rgba(255,255,255,.21)}
+@media(max-width:600px){section{padding:90px 0 100px}.hero{padding:80px 0 120px}.card{padding:60px 32px}.form{padding:32px 24px}}
+</style></head><body>
+<div class="bg"></div>
+<header><div class="wrap"><a class="logo" href="/" aria-label="CV Ventures"><b>CV</b><span>VENTURES</span></a><nav><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero"><div class="wrap"><h1>A Tiny Startup Studio</h1><p class="lead">CV Ventures brings ideas, capital, resources, and talent together to build great products &amp; tools.</p></div></section>
+<div class="hr"></div>
+
+<section id="products"><div class="wrap"><h2>Products</h2><p class="lead">Take a look at the existing products in our portfolio</p>
+<div class="grid">
+<div class="card"><span class="chip">Track inbound calls</span><h4>CallScaler</h4><p>Business call tracking software built to scale with you.</p><a class="btn" href="https://callscaler.com" target="_blank" rel="noopener">View Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a></div>
+<div class="card"><span class="chip">Track website traffic</span><h4>VisitorTracking</h4><p>All-in-one website tracking</p><a class="btn" href="https://visitortracking.com" target="_blank" rel="noopener">View Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a></div>
+<div class="card"><span class="chip">AI + SEO</span><h4>Highlighted.ai</h4><p>Track how often AI mentions your brand or website</p><a class="btn" href="https://highlighted.ai" target="_blank" rel="noopener">View Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a></div>
+<div class="card"><span class="chip">Content creation</span><h4>Wordplay</h4><p>Long-form AI writer</p><a class="btn" href="https://wordplay.ai" target="_blank" rel="noopener">View Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a></div>
+<div class="card"><span class="chip sold">Sold in 2025</span><h4>SheetMagic</h4><p>AI in Google Sheets</p></div>
+<div class="card"><span class="chip sold">Sold in 2025</span><h4>Bulk Ranker</h4><p>Programmatic SEO for WordPress</p></div>
+<div class="card glass"><span class="chip soon">Coming soon</span><h4>More soon...</h4><p>We're constantly bringing new products to life. Stay tuned.</p></div>
+</div></div></section>
+<div class="hr"></div>
+
+<section id="about" class="about"><div class="wrap"><h2>About</h2><p>CV Ventures is a small startup studio owned and operated by Curran Van Waarde.</p><p>We partner with talented developers to build handy software products. Our goal is to create a stellar suite of software tools for businesses to enjoy &amp; get value from.</p></div></section>
+<div class="hr"></div>
+
+<section id="contact"><div class="wrap"><h2>Contact</h2><p class="lead">Are you a developer with a startup idea? We'd love to work with you.</p>
+<form class="form" action="https://formsubmit.co/curranatcallscaler@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New message from cv.ventures">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://cv.ventures/?sent=1#contact">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+<label for="f-name">Name</label><input id="f-name" type="text" name="name" placeholder="Name">
+<label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="Email" required>
+<label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+<p class="thanks" id="thanks">Thanks, your message was sent. We'll be in touch.</p>
+</div></section>
+<div class="hr"></div>
+
+<footer>CV Ventures LLC - All Rights Reserved</footer>
+<script>if(location.search.includes('sent=1')){document.getElementById('thanks').style.display='block';history.replaceState(null,'',location.pathname+'#contact')}</script>
+</body></html>
